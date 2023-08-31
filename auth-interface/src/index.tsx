@@ -14,7 +14,7 @@ import "./index.css";
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 
 const host = process.env.REACT_APP_ORY_URL || "http://localhost:4000";
-const accessToken = "ory_pat_EAZO9hq8HpA32j1X03DIj2KVBwRuSyLF";
+const accessToken = process.env.ACCESS_TOKEN || "token";
 
 root.render(
   <React.StrictMode>
