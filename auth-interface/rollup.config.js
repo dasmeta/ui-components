@@ -27,7 +27,7 @@ export default {
     commonjs(),
     json(),
     typescript({
-      clean: true,
+      clean: true
     }),
     babel({
       babelHelpers: 'runtime',
@@ -52,4 +52,5 @@ export default {
       ],
     }),
   ],
+  external: ['axios', "react", "react-dom" ]
 };
