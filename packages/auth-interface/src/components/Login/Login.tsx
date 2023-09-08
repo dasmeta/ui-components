@@ -1,10 +1,5 @@
-import React, { useCallback, useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 import { Button, Card, Col, Form, Row, Spin, Typography } from "antd";
-import { LoginFlow, UiNode } from "@ory/client";
-import { AuthContext } from "../../contexts/AuthContext";
-import useSearchParams from "../../hooks/useSearchParams";
-import useNavigate from "../../hooks/useNavigate";
 import { NavigationLink } from "../../components/Common/NavigationLink";
 import { EmailFormItem } from "../../components/Form/EmailFormItem";
 import { PasswordFormItem } from "../../components/Form/PasswordFormItem";
@@ -16,13 +11,6 @@ type LoginFormDataType = {
   email: string;
   password: string;
 };
-
-// type LoginDataType = {
-//   identifier: string;
-//   password: string;
-//   method: string;
-//   csrf_token: string;
-// };
 
 type LoginPropsType = {
   logo?: string;

@@ -77,31 +77,6 @@ export const OryForm = (props: OryFormProps): React.JSX.Element => {
 
             }
         })}
-          {/* <EmailFormItem />
-          <PasswordFormItem />
-
-        <Form.Item>
-        <Row justify="end">
-            <NavigationLink route={passwordResetRoute} title={"Forgot Password"} />
-        </Row>
-        </Form.Item>
-
-        <Form.Item>
-            <Row justify="center" gutter={[12, 12]}>
-                <Col span={24}>
-                <Button type="primary" htmlType="submit" block>
-                    Sign in
-                </Button>
-                </Col>
-                <Col>
-                <NavigationLink
-                    route={registrationRoute} 
-                    title={"Sign Up"}
-                    onClick={onRegistrationClick}
-                />
-                </Col>
-            </Row>
-        </Form.Item> */}
     </Form>
   )
 };
