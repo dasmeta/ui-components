@@ -21,9 +21,6 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Bootstrap Lerna
-        run: npx lerna bootstrap
-
       - name: Build Changed Packages
         run: npx lerna run build --since origin/main
 
