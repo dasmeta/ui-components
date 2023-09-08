@@ -25,7 +25,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build Changed Packages
-        run: npx lerna run build --since origin/main
+        run: npx lerna run build
 
       - name: Publish to npm
         run: npx lerna publish from-git --yes

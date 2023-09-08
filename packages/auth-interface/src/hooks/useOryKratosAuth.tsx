@@ -2,7 +2,7 @@ import React, { useState, useCallback, useEffect } from "react";
 import { LoginFlow, UiNode, UpdateLoginFlowBody } from "@ory/client";
 import { AuthMethods, ConfigProps } from "../types";
 import { Flow } from "../constants";
-import { client, clientError } from "../oryClient";
+import { client } from "../oryClient";
 import useSearchParams from "./useSearchParams";
 import { OryForm } from "../components/Ory/OryForm";
 
