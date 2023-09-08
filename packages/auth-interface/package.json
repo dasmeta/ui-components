@@ -1,7 +1,7 @@
 {
   "name": "@dasmeta/auth-interface",
   "description": "Auth interface for all",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "./lib/index.js",
   "module": "./lib/index.es.js",
   "dependencies": {
