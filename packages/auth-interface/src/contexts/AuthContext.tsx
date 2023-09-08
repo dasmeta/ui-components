@@ -1,7 +1,5 @@
 import React, { ReactElement, createContext } from 'react';
-import useOryKratosAuth from '../hooks/useOryKratosAuth';
-import useAuth0Auth from '../hooks/useAuth0Auth';
-import { ConfigProps, AuthMethods, TranslationsProps } from '../types';
+import { ConfigProps, TranslationsProps } from '../types';
 import { Provider } from '../constants';
 
 const defaultTranslations: TranslationsProps = {
