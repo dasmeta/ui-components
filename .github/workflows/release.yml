@@ -12,8 +12,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      # - name: Fetch Latest Git References
-      #   run: git fetch --all
+      - name: Fetch Latest Git References
+        run: git fetch origin main
         
       - name: Setup Node.js
         uses: actions/setup-node@v2

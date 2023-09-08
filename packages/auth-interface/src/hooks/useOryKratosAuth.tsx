@@ -1,16 +1,10 @@
 import React, { useState, useCallback, useEffect } from "react";
-import axios from "axios";
 import { LoginFlow, UiNode, UpdateLoginFlowBody } from "@ory/client";
 import { AuthMethods, ConfigProps } from "../types";
 import { Flow } from "../constants";
 import { client, clientError } from "../oryClient";
 import useSearchParams from "./useSearchParams";
 import { OryForm } from "../components/Ory/OryForm";
-
-type Credentials = {
-    username: string,
-    password: string,
-}
 
 function useOryKratosAuth(config: ConfigProps, flowType: Flow): AuthMethods {
 
