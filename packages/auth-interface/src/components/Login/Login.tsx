@@ -19,7 +19,6 @@ type LoginPropsType = {
   passwordResetRoute?: string;
   authSystem?: "ory" | "auth0";
   cardWidth?: number;
-  host: string;
   onRegistrationClick?: (route: string) => void;
 };
 
@@ -41,11 +40,16 @@ export const Login = (props: LoginPropsType): React.JSX.Element => {
 
   return !loading ? (
     <Card bordered={true} style={{ width: cardWidth }}>
-      {logo && <Logo src={logo} />}
-      <Row justify="center">
+      <Row style={{ marginBottom: "32px" }} justify="center">
+        {logo && <Logo src={logo} />}
+      </Row>
+
+      <Row gutter={[16, 16]} justify="center">
         <Typography.Title level={3}>{title}</Typography.Title>
       </Row>
-      { renderForm ? renderForm() : (
+      {renderForm ? (
+        renderForm()
+      ) : (
         <Form name="login" initialValues={{ remember: true }} onFinish={onFinish} autoComplete="on" layout="vertical">
           <EmailFormItem />
           <PasswordFormItem />
@@ -64,15 +68,11 @@ export const Login = (props: LoginPropsType): React.JSX.Element => {
                 </Button>
               </Col>
               <Col>
-                <NavigationLink
-                  route={registrationRoute} 
-                  title={"Sign Up"}
-                  onClick={onRegistrationClick}
-                />
+                <NavigationLink route={registrationRoute} title={"Sign Up"} onClick={onRegistrationClick} />
               </Col>
             </Row>
           </Form.Item>
-      </Form>
+        </Form>
       )}
     </Card>
   ) : (

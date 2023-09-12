@@ -5,13 +5,11 @@ import { checkWhitespaces } from "../../utils/validation";
 import { AuthContext } from "../../contexts/AuthContext";
 
 type LoginFormProps = {
-  handleSubmit: (data: StrapiLoginFormBody) => Promise<void>
+  handleSubmit: (data: StrapiLoginFormBody) => Promise<void>;
 };
 
 export const LoginForm = (props: LoginFormProps): React.JSX.Element => {
-  const {
-   handleSubmit = () => {}
-  } = props;
+  const { handleSubmit = () => {} } = props;
 
   const { translate } = useContext(AuthContext);
 
@@ -20,35 +18,26 @@ export const LoginForm = (props: LoginFormProps): React.JSX.Element => {
   };
 
   return (
-    <Form 
-        name="strapi-form" 
-        onFinish={onFinish} 
-        autoComplete="on" 
-        layout="vertical"
-    >
-        <Form.Item
-            label={translate('username')}
-            name="identifier"
-            rules={[
-                { required: true, message: translate('required-field') },
-                { validator: checkWhitespaces },
-            ]}
-            >
-            <Input />
-        </Form.Item>
-        <Form.Item
-            label={translate('password')}
-            name="password"
-            rules={[
-                { required: true, message: translate('required-field') }, 
-                { validator: checkWhitespaces }
-            ]}
-        >
-            <Input.Password />
-        </Form.Item>
-        <Form.Item>
-            <Button block type="primary" htmlType="submit">{translate('sign-in')}</Button>
-        </Form.Item>
+    <Form name="strapi-form" onFinish={onFinish} autoComplete="on" layout="vertical">
+      <Form.Item
+        label={translate("username")}
+        name="identifier"
+        rules={[{ required: true, message: translate("required-field") }, { validator: checkWhitespaces }]}
+      >
+        <Input />
+      </Form.Item>
+      <Form.Item
+        label={translate("password")}
+        name="password"
+        rules={[{ required: true, message: translate("required-field") }, { validator: checkWhitespaces }]}
+      >
+        <Input.Password />
+      </Form.Item>
+      <Form.Item>
+        <Button block type="primary" htmlType="submit">
+          {translate("sign-in")}
+        </Button>
+      </Form.Item>
     </Form>
-  )
+  );
 };
